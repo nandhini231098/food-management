@@ -52,7 +52,8 @@ public class CartController {
 	
 	@GetMapping("/user/deleteitem/{cartid}")	 
 	public String delete(@PathVariable("cartid") Long cartid) { 		
-		cartService.deletebyid(cartid);			
+		cartService.deletebyid(cartid);
+		LOGGER.info("Cart Controller");
 		return ("redirect:/user/viewcart");
 	}
 	
